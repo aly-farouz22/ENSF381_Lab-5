@@ -238,6 +238,15 @@ Description : DOM Elements.
             // Hide the section titled 'What is full-stack?'
             document.querySelector('article').style.display = 'none';
 
+            // Task 4
+            const newParagraph = document.createElement('p');
+            newParagraph.textContent = 'This is a new paragraph';
+            newParagraph.style.color = 'red';
+
+            // Append the new paragraph to the end of the about us section
+            const aboutUsSection = document.querySelector('section:nth-of-type(1)');
+            aboutUsSection.appendChild(newParagraph);
+
             // Task 5
             // Add placeholders to input elements based on their corresponding label IDs
             const labels = document.querySelectorAll('label');
