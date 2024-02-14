@@ -13,7 +13,7 @@ const createMatrix = (title, containerId, rows, cols) => {
             let td = document.createElement('td');
             let input = document.createElement('input');
             input.type = 'number';
-            input.value = Math.floor(Math.random() * 100); // Random value between 0 and 99
+            input.value = Math.floor(Math.random() * 100); 
             td.appendChild(input);
             tr.appendChild(td);
         }
@@ -26,7 +26,7 @@ const createMatrix = (title, containerId, rows, cols) => {
 
 const showResult = (title, containerId, rows, cols, dataArray) => {
     let container = document.getElementById(containerId);
-    container.innerHTML = ''; // Clear previous content
+    container.innerHTML = ''; 
     let table = document.createElement('table');
 
     for (let i = 0; i < rows; i++) {
@@ -113,7 +113,7 @@ const getMatrixData2D = function (matrixId) {
             if (index < inputs.length) {
                 rowData.push(parseInt(inputs[index].value, 10));
             } else {
-                rowData.push(0); // Default value if input is missing
+                rowData.push(0); 
             }
         }
         matrixData.push(rowData);
