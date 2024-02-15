@@ -129,7 +129,7 @@ Description : DOM Elements.
             <li><a href="#">Contact</a></li>
             <!-- Task 7 -->
             <!-- Add a new item in the navigation menu -->
-            <li><a href="#">New Item</a></li>
+            <li><a href="#">Blog</a></li>
         </ul>
     </nav>
     <div class="container">
@@ -194,7 +194,7 @@ Description : DOM Elements.
                 <input type="email" id="email" name="email" placeholder="Email" /><br />
                 <label for="message">Message:</label>
                 <textarea id="message" name="message" placeholder="Your message"></textarea><br />
-                <input type="button" value="Submit" disabled />
+                <input type="button" value="Submitted" disabled />
             </form>
         </section>
         <article>
@@ -226,10 +226,15 @@ Description : DOM Elements.
     <footer>
         <!-- Task 10 -->
         <!-- Add a red solid border to the footer -->
-        <p style="border: 1px solid red;">Copyright © 2024</p>
+        <p style="border: 2px solid red;">Copyright © 2024</p>
     </footer>
     <script>
+        
         document.addEventListener('DOMContentLoaded', function afterRender() {
+            const companyNames = document.querySelectorAll('.companyName');
+            companyNames.forEach(element => {
+                element.textContent = "Aly&Kareem";
+            });
             // Task 2
             // Change the background color of the navigation bar
             document.querySelector('nav').style.backgroundColor = 'lightblue';
@@ -257,6 +262,9 @@ Description : DOM Elements.
                     inputElement.placeholder = label.innerText;
                 }
             });
+            const image = document.querySelector('img');
+            image.src = './images/example.svg';
+
 
             // Task 8
             // Change the submit button text upon clicking and make it disabled
